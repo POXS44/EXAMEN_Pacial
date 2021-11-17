@@ -18,4 +18,16 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function test_update()
+    {
+         $response = $this->put('/api/proveedor/2', ['nombre' => 'Victor','tipo' => 'Laptop']);
+       
+         $response
+            ->assertStatus(200)
+             ->assertJson([
+                 'mensaje' => 'proveedor actualizado exitosamente',
+             ]);
+     }
+
 }
