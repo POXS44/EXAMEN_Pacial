@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\GuardarproveedorRequest;
 use App\Http\Requests\EditarproveedorRequest;
 
-class ProductosController extends Controller
+class proveedorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -60,7 +60,7 @@ class ProductosController extends Controller
         $proveedor->update($request->all());
         return response()->json([
             'res'=>true,
-            'mensaje'=>'proveedor$proveedor actualizado exitosamente'
+            'mensaje'=>'proveedor actualizado exitosamente'
         ],200); 
 
     }
@@ -75,7 +75,7 @@ class ProductosController extends Controller
         $proveedor->delete();
         return response()->json([
             'res'=>true,
-            'mensaje'=>'proveedor$proveedor Eliminado exitosamente'
+            'mensaje'=>'proveedor Eliminado exitosamente'
         ]);
     }
 }
